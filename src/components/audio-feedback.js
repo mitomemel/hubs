@@ -44,6 +44,14 @@ function updateVolume(component) {
   component.prevVolume = component.volume;
 }
 
+window.heardClientIds = new Set();
+window.audioAnalyzers = [];
+
+window.setInterval(() => {
+  console.log(`heard ${window.heardClientIds.size} voices out of ${window.audioAnalyzers.length} avatars`);
+  window.heardClientIds.clear();
+}, 5000);
+
 /**
  * Updates a `volume` property based on a networked audio source
  * @namespace avatar
@@ -65,10 +73,16 @@ AFRAME.registerComponent("networked-audio-analyser", {
       this.levels = new Uint8Array(this.analyser.fftSize);
       event.detail.soundSource.connect(this.analyser);
     });
+
+    window.audioAnalyzers.push(this);
   },
 
   remove: function() {
     this.el.sceneEl.systems["frame-scheduler"].unschedule(this._runScheduledWork, "audio-analyser");
+    const idx = window.audioAnalyzers.indexOf(this);
+    if (idx !== -1) {
+      window.audioAnalyzers.splice(idx, 1);
+    }
   },
 
   tick: function(t) {
@@ -102,6 +116,9 @@ AFRAME.registerComponent("networked-audio-analyser", {
       }
 
       this.avatarIsQuiet = false;
+      if (this.el.parentEl && this.el.parentEl.parentEl && this.el.parentEl.parentEl.parentEl) {
+        window.heardClientIds.add(this.el.parentEl.parentEl.parentEl.components["player-info"].playerSessionId);
+      }
     }
   }
 });
