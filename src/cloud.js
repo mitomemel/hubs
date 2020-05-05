@@ -11,9 +11,10 @@ import registerTelemetry from "./telemetry";
 registerTelemetry("/cloud", "Hubs Cloud Landing Page");
 
 import en from "react-intl/locale-data/en";
+import ja from "react-intl/locale-data/ja";
 import { lang, messages } from "./utils/i18n";
 
-addLocaleData([...en]);
+addLocaleData([...en, ...ja]);
 const marketplaceEnterpriseListingUrl = "https://aws.amazon.com/marketplace/pp/B084WNGRRP";
 const marketplacePersonalListingUrl = "https://aws.amazon.com/marketplace/pp/B084RZH56R";
 const awsQuickStartLink = "https://hubs.mozilla.com/docs/hubs-cloud-aws-quick-start.html";
