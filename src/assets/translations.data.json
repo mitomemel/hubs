@@ -433,7 +433,7 @@
     "auth.verify-failed": "このリンクではサインインできません。既に使用済みか期限が切れています。",
     "auth.verified": "あなたのメールが認証されました!\nこのブラウザタブは閉じて%app-name%に戻って大丈夫です。",
     "auth.spoke-verified": "あなたのメールが認証されました!\nこのブラウザタブは閉じて%editor-name%に戻って大丈夫です。",
-    "sign-in.prompt": "部屋内のオブジェクトをピン止めするにはログインして下さい。",
+    "sign-in.prompt": "部屋内のオブジェクトをピン止めするにはサインインして下さい。",
     "sign-in.admin": "Check your email for a verification email. Once verified, enter your email to create your account or sign in.",
     "sign-in.admin-no-permission": "You don't have access to admin tools. Sign into another account or ask an administrator to grant you permission.",
     "sign-in.hub": "An account is required to join rooms.\n\nEnter your email to create your account or sign in.",
