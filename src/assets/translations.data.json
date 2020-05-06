@@ -752,7 +752,7 @@
     "tips.mobile.feedback": "🦆 Quack! Want to help Hubs?",
     "tips.mobile.feedback-link": "Tell the Duck.",
     "tips.desktop.video_share_mode": "You're streaming. Select again to stop sharing video.",
-    "tips.desktop.pen_mode": "ESCキーか右クリックでペンを置きます。Ctrl+Zでアンドゥします。",
+    "tips.desktop.pen_mode": "ESCキーか右クリックでペンを放します。Ctrl+Zでアンドゥします。",
     "tips.desktop.mute_mode": "マイクがミュートされています。クリックか M キーでミュートを解除できます。",
     "tips.desktop.look": "%app-name%にようこそ！チュートリアルを開始します。👋 クリックとドラッグで周りを見渡してみましょう。",
     "tips.desktop.locomotion": "W A S D キーで移動します。Shiftを押しながらだと速く移動できます。",
